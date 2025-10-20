@@ -1,0 +1,13 @@
+{
+  "name": "nfl-goal-tracker",
+  "private": true,
+  "workspaces": ["server", "client"],
+  "scripts": {
+    "dev": "concurrently \"npm:dev --workspace server\" \"npm:dev --workspace client\"",
+    "build": "npm run build --workspace client && npm run build --workspace server",
+    "start": "npm run start --workspace server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
